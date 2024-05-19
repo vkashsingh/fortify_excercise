@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.opentext.fortify.exercise.lineEditor.LineEditor"
+            default="false"
+            extensions="txt"
+            id="org.opentext.fortify.exercise.lineEditor"
+            name="Line Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.opentext.fortify.exercise.lineEditor.ListHandler"
+            commandId="org.opentext.fortify.exercise.command.list">
+      </handler>
+      <handler
+            class="org.opentext.fortify.exercise.lineEditor.InsertLineHandler"
+            commandId="com.example.lineeditor.commands.insertLine">
+      </handler>
+      <handler
+            class="org.opentext.fortify.exercise.lineEditor.DeleteHandler"
+            commandId="org.opentext.fortify.exercise.delete">
+      </handler>
+      <handler
+            class="org.opentext.fortify.exercise.lineEditor.SaveHandler"
+            commandId="org.opentext.fortify.exercise.save">
+      </handler>
+      <handler
+            class="org.opentext.fortify.exercise.lineEditor.QuitHandler"
+            commandId="org.opentext.fortify.exercise.close">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.example.lineeditor.commands.insertLine"
+            name="Ins">
+         <commandParameter
+               id="insertRowN"
+               name="Insert at"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="newLine"
+               name="new Line"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            id="org.opentext.fortify.exercise.command.list"
+            name="list">
+      </command>
+      <command
+            id="org.opentext.fortify.exercise.delete"
+            name="delete">
+      </command>
+      <command
+            id="org.opentext.fortify.exercise.save"
+            name="save">
+      </command>
+      <command
+            id="org.opentext.fortify.exercise.close"
+            name="quit">
+      </command>
+   </extension>
+
+
+
+
+
+
+
+</plugin>
