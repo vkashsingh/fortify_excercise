@@ -57,6 +57,11 @@
       <command
             id="org.opentext.fortify.exercise.delete"
             name="delete">
+         <commandParameter
+               id="lineNumber"
+               name="line Number"
+               optional="true">
+         </commandParameter>
       </command>
       <command
             id="org.opentext.fortify.exercise.save"
